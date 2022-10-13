@@ -1,0 +1,39 @@
+Source: node-cache-base
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Sruthi Chandran <srud@disroot.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , mocha
+ , node-collection-visit
+ , node-get-value
+ , node-kind-of
+ , node-sellside-emitter
+ , node-set-value (>= 4.1.0)
+ , node-union-value
+ , node-unset-value
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-cache-base
+Vcs-Git: https://salsa.debian.org/js-team/node-cache-base.git
+Homepage: https://github.com/jonschlinkert/cache-base
+Rules-Requires-Root: no
+
+Package: node-cache-base
+Architecture: all
+Depends: ${misc:Depends}
+ , node-collection-visit
+ , node-get-value
+ , node-kind-of
+ , node-sellside-emitter
+ , node-set-value (>= 4.1.0)
+ , node-union-value
+ , node-unset-value
+Breaks: node-base (<< 3.0.0~)
+Provides: ${nodejs:Provides}
+Description: Basic object cache for node.js/javascript projects
+ Basic object cache with `get`, `set`, `del`, and `has` methods for
+ node.js/javascript projects
+ .
+ Node.js is an event-based server-side JavaScript engine.
